@@ -6,7 +6,7 @@ services:
   web_jessie:
     build:
       context: .
-    #  target: builder
+      target: builder_jessie
     # flask requires SIGINT to stop gracefully
     # (default stop signal from Compose is SIGTERM)
     # stop_signal: SIGINT
