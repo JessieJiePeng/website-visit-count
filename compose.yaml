@@ -1,5 +1,5 @@
 services:
-  redis_jessie:
+  redis:
     image: redislabs/redismod
     ports:
       - '6379:6379'
@@ -15,4 +15,4 @@ services:
     volumes:
       - .:/code
     depends_on:
-      - redis_jessie
+      - redis
