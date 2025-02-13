@@ -1,9 +1,9 @@
 services:
-  redis:
+  redis_jessie:
     image: redislabs/redismod
     ports:
       - '6379:6379'
-  web:
+  web_jessie:
     build:
       context: .
     #  target: builder
@@ -15,4 +15,4 @@ services:
     volumes:
       - .:/code
     depends_on:
-      - redis
+      - redis_jessie
