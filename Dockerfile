@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:1.4
-FROM python:3.10-alpine AS builder
+FROM python:3.10-alpine AS builder_jessie
 
 WORKDIR /code
 
@@ -11,7 +11,7 @@ COPY . /code
 ENTRYPOINT ["python3"]
 CMD ["app.py"]
 
-FROM builder as dev-envs
+FROM builder_jessie as dev-envs
 
 RUN <<EOF
 apk update
